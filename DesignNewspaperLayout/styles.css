@@ -1,0 +1,56 @@
+
+/* Main grid container */
+.newspaper-layout {
+  display: grid;
+  
+  /*Three equal columns using fractional units */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Alternative: grid-template-columns: repeat(3, 1fr); */
+  
+  /* First row auto, others equal height */
+  grid-template-rows: auto 1fr 1fr 1fr;
+  
+  /*  Add gap between grid items */
+  gap: 20px;
+  
+  /*  Define the grid template areas */
+  grid-template-areas: 
+    "title title title"                    /* title spans all 3 columns in row 1 */
+    "feature-article feature-article cover-image"  /*  feature-article spans 2 cols, cover-image in col 3 */
+    "secondary-article secondary-article cover-image" /*  secondary-article spans 2 cols, cover-image continues */
+    "small-article1 small-article2 small-article3";   /*  three small articles in row 4 */
+}
+
+/* Grid area assignments  */
+.title {
+  grid-area: title;
+}
+
+.feature-article {
+  grid-area: feature-article;
+}
+
+.cover-image {
+  grid-area: cover-image;
+}
+
+.secondary-article {
+  grid-area: secondary-article;
+}
+
+.small-article1 {
+  grid-area: small-article1;
+}
+
+.small-article2 {
+  grid-area: small-article2;
+}
+
+.small-article3 {
+  grid-area: small-article3;
+}
+
+/* Image should fit within designated space */
+.cover-image img {
+  max-width: 100%;
+}
