@@ -1,0 +1,75 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    color: white;
+}
+
+body{
+    background: linear-gradient(to right, rgb(251, 0, 0), rgb(0, 0, 0), rgb(251, 0, 0));
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.title{
+    font-size: 4rem;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.input-container{
+    background-color: black;
+    padding: 4rem;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#text-input{
+    font-size: 2rem;
+    border: 0.5rem solid;
+    border-radius: 15px;
+    border-color: yellow;
+    width: 36rem;
+    height: 10rem;
+    padding: 0.5rem;
+    overflow: auto;
+
+}
+#text-input::placeholder{
+    padding: 1rem;
+    font-style: italic;
+}
+
+#check-btn{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    width: 10rem;
+    height: 3rem;
+    margin: 1rem;
+    background-color: orangered;
+    color: linen;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+#check-btn:hover{
+    background-color: lightsalmon;
+}
+
+#result{
+    margin: 1rem auto;
+    font-size: 2rem;
+    color: white;
+}
